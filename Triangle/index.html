@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="cz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trojúhelník</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/site.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="./scripts/triangle.js"></script>
+    <script src="./scripts/index.js"></script>
+</head>
+<body>
+    <div class="container mt-3">
+        <h1>Obecný trojúhelník</h1>
+        <form id="triangleForm">
+            <div class="row">
+                <div class="form-group col-md">
+                    <label for="sideA">Strana <i>a</i></label>
+                    <input type="number" class="form-control" id="sideA" placeholder="Délka strany A" name="a" required min="0"/>
+                    <div class="feedback"></div>
+                </div>
+                <div class="form-group col-md">
+                    <label for="sideB">Strana <i>b</i></label>
+                    <input type="number" class="form-control" id="sideB" placeholder="Délka strany B" name="b" required min="0"/>
+                    <div class="feedback"></div>
+                </div>
+                <div class="form-group col-md">
+                    <label for="sideC">Strana <i>c</i></label>
+                    <input type="number" class="form-control" id="sideC" placeholder="Délka strany C" name="c" required min="0" />
+                    <div class="feedback"></div>
+                </div>
+            </div>
+            <div class="my-3">
+                <button class="btn btn-primary" type="submit" id="process">Vypočítat a zobrazit</button>
+            </div>
+        </form>
+        <div id="result-feedback"></div>
+        <div class="row">
+            <div class="form-group col-md">
+                <label for="alpha">&alpha;</label>
+                <output class="form-control" id="alpha" value="0">
+            </div>
+            <div class="form-group col-md">
+                <label for="beta">&beta;</label>
+                <output class="form-control" id="beta" value="0">
+            </div>
+            <div class="form-group col-md">
+                <label for="gamma">&gamma;</label>
+                <output class="form-control" id="gamma" value="0">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md">
+                <label for="perimeter">Obvod</label>
+                <output class="form-control" id="perimeter" value="0"s>
+            </div>
+            <div class="form-group col-md">
+                <label for="content">Obsah</label>
+                <output class="form-control" id="content" value="0">
+            </div>
+        </div>
+        <div class="text-center m-1">
+            <svg width="300" height="300" id="view" viewbox="0 0 0 0">
+                <polygon id="scheme" />
+            </svg>
+        </div>
+    </div>
+</body>
+</html>

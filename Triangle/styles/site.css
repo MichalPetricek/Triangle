@@ -1,0 +1,8 @@
+svg {
+    background-color: rgb(230,230,230);
+}
+svg polygon {
+    fill:rgba(255,255,0,0.3);;
+    stroke:red;;
+    stroke-width:0.02;
+}
